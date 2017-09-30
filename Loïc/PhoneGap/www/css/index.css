@@ -35,52 +35,61 @@ body {
     background-attachment:fixed;
     font-family: Verdana, sans-serif;
     font-size:12px;
-    text-transform:uppercase;
     display: table;
 }
 
 ul {list-style-type: none;}
 
-/* Month header */
-.month {
-    padding: 70px 0px;
+.head {
+    padding: 20px 0px; 
+    color: white;
+    background: #00BFFF;
+    text-align: center;
+    font-size: 20px; 
+    text-transform: uppercase;
+}
+
+/* header header */
+.top {
+    padding: 60px 0px;
     width: 100%;
     background: #00BFFF;
     text-align: center;
     height:30%;
 }
 
-/* Month list */
-.month ul {
+/* header list */
+.top ul {
     margin: 0;
     padding: 0;
 }
 
-.month ul li {
+.top ul li {
     color: white;
     font-size: 20px;
     text-transform: uppercase;
     letter-spacing: 3px;
 }
 
-/* Previous button inside month header */
-.month .prev {
+/* Previous button inside header header */
+.top .prev {
     float: left;
     padding-top: 10px;
 }
 
 /* Next button */
-.month .next {
+.top .next {
     float: right;
     padding-top: 10px;
 }
 
 /* Weekdays (Mon-Sun) */
 .weekdays {
+    text-transform: uppercase;
     margin: 0;
     padding: 10px 0;
     background-color:#ddd;
-    height: 12%;
+    height: 11%;
 }
 
 .weekdays li {
@@ -94,7 +103,7 @@ ul {list-style-type: none;}
 
 /* Days (1-31) */
 .days {
-    padding: 10px 0;
+    padding: 5px 0;
     background: #eee;
     margin: 0;
 }
@@ -107,7 +116,7 @@ ul {list-style-type: none;}
     margin-top: 12px;
     margin-bottom: 12px;
     font-size:12px;
-    color:#777;
+    color:#666;
 }
 
 /* Highlight the "current" day */
@@ -139,9 +148,29 @@ ul {list-style-type: none;}
 }
 
 .bottom {
-    height:10%;
+    height: 10%;
     position: absolute;
     bottom: 0;
     background: #00BFFF;
     width: 100%;
+}
+
+.createdevt, .joinedevt {
+    border-top: 3px solid lightblue;
+    padding: 10px 0px;
+    margin-bottom: 5px;
+    display: block;
+    text-transform: uppercase;
+    text-align: center;
+    background-color: #ccc;
+}
+
+.event {
+    color: #555;
+    border-radius: 5px;
+    border: 1px solid;
+    padding: 5px 5px;
+    display: inline-block;
+    margin: 5px 0px;
+    background-color: #eee;
 }
