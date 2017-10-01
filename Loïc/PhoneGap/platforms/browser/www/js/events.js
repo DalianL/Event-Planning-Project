@@ -25,7 +25,22 @@ var app = {
     },
 
     bindEvents: function() {
+        var backbutton = document.querySelector("#back");
+        var event1 = document.querySelector("#MrsC");
 
+        backbutton.addEventListener('touchstart', this.onTouch, false);
+
+        event1.addEventListener('touchstart', this.onTouch, false);
+    },
+
+    onTouch: function() {
+        if (document.querySelector("#event1").style.display == "none") {
+            document.querySelector("#events").setAttribute('style', 'display:none;');
+            document.querySelector("#event1").setAttribute('style', 'display:block;');
+        } else {
+            document.querySelector("#event1").setAttribute('style', 'display:none;');
+            document.querySelector("#events").setAttribute('style', 'display:block;');
+        }
     }
 
 };

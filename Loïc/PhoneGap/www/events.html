@@ -17,41 +17,66 @@
 	    -->
 	    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
 
-	    <link rel="stylesheet" type="text/css" href="css/index.css" />
+	    <link rel="stylesheet" type="text/css" href="css/events.css" />
         <title>Event Schedule App</title>
     </head>
     <body>
-    	<div style="height:20px;"></div>
+    	<div id="events" style="display:block">
+	    	<div style="height:20px;"></div>
 
-    	<div class="head">My events</div>
+	    	<div class="head">My events</div>
 
-    	<div class="createdevt">Organised events :</div>
+	    	<div class="createdevt">Organised events :</div>
 
-    	<ul style="padding:0px 30px;">
-    		<li class="event">Concert - Arènes de Cimiez</li> (in 5 days)<br>
-    		<li class="event">Concert - Paddys Bar</li> (in 8 days)<br>
-    	</ul>
+	    	<ul style="padding:0px 30px;">
+	    		<li class="event">Concert - Arènes de Cimiez</li> (in 5 days)<br>
+	    		<li class="event">Concert - Paddys Bar</li> (in 8 days)<br>
+	    	</ul>
 
-    	<div class="joinedevt">Participing in :</div>
+	    	<div class="joinedevt">Participing in :</div>
 
-    	<ul style="padding:0px 30px;">
-    		<li class="event">Théatre - Mademoiselle C</li> (in 2 days)<br>
-    		<li class="event">Salon - L'Etudiant</li> (in 7 days)<br>
-    		<li class="event">Sport - OGC Nice vs Lyon</li> (in 7 days)<br>
-    	</ul>
+	    	<ul style="padding:0px 30px;">
+	    		<li class="event" id="MrsC">Théatre - Alfonso</li> (in 2 days)<br>
+	    		<li class="event">Salon - L'Etudiant</li> (in 7 days)<br>
+	    		<li class="event">Sport - OGC Nice vs Lyon</li> (in 7 days)<br>
+	    	</ul>
 
-		<div class="bottom">
-			<ul class="buttons">
-				<li class="button"><a href="index.html">Calendar</a></li>
-				<li class="sep"> | </li>
-				<li class="button">Search</li>
-				<li class="sep"> | </li>
-				<li class="button">Settings</li>
-			</ul>
-		</div>
+			<div class="bottom">
+				<ul class="buttons">
+					<li class="button"><a href="index.html">Calendar</a></li>
+					<li class="sep"> | </li>
+					<li class="button">Search</li>
+					<li class="sep"> | </li>
+					<li class="button">Settings</li>
+				</ul>
+			</div>
+    	</div>
+
+    	<div id="event1" style="display:none;">
+    		<div style="height:20px;"></div>
+
+			<div class="top">
+			  	<ul>
+				    <li class="prev" id="back">&#10094;</li>
+				    <li style="padding-top:1px; padding-right: 15px;">Alfonso</li>
+			  	</ul>
+			</div>
+
+			<ul class="infos">
+				<li class="info"><b>Type:</b> Théatre</li>
+				<li class="info"><b>Organisateur:</b> Antony Ro</li>
+				<li class="info"><b>Public:</b> oui</li>
+				<li class="info"><b>Lieu:</b> 2 Montée Auguste Kerl 06300 Nice</li>
+				<li class="info"><b>Date:</b> 20/10/2017</li>
+				<li class="info"><b>Horaires:</b> à 20h</li>
+				<li class="info"><b>Nombre de places:</b> 100</li>
+				<li class="info"><b>Tags:</b> #Théâtre #Alfonso</li>
+			</ul>	
+
+    	</div>
 
 	    <script type="text/javascript" src="cordova.js"></script>
-	    <script type="text/javascript" src="js/index.js"></script>
+	    <script type="text/javascript" src="js/events.js"></script>
 	    <script type="text/javascript">
 	        app.initialize();
 	    </script>
