@@ -20,9 +20,11 @@
 	    <link rel="stylesheet" type="text/css" href="css/events.css" />
         <title>Event Schedule App</title>
     </head>
+
     <body>
-    	<div id="events" style="display:block">
-	    	<div style="height:20px;"></div>
+		<div style="height:20px;"></div>
+
+    	<div id="events" style="display:block">	
 
 	    	<div class="head">My events</div>
 
@@ -36,7 +38,7 @@
 	    	<div class="joinedevt">Participing in :</div>
 
 	    	<ul style="padding:0px 30px;">
-	    		<li class="event" id="MrsC">Théatre - Alfonso</li> (in 2 days)<br>
+	    		<li class="event" id="Alfonso">Théatre - Alfonso</li> (in 2 days)<br>
 	    		<li class="event">Salon - L'Etudiant</li> (in 7 days)<br>
 	    		<li class="event">Sport - OGC Nice vs Lyon</li> (in 7 days)<br>
 	    	</ul>
@@ -52,26 +54,22 @@
 			</div>
     	</div>
 
-    	<div id="event1" style="display:none;">
-    		<div style="height:20px;"></div>
+    	<script type="text/javascript" src="js/event.js"></script>
 
-			<div class="top">
+    	<div id="event3" style="display:none;">
+
+			<div class="eventtitle">
 			  	<ul>
 				    <li class="prev" id="back">&#10094;</li>
 				    <li style="padding-top:1px; padding-right: 15px;">Alfonso</li>
 			  	</ul>
 			</div>
 
-			<ul class="infos">
-				<li class="info"><b>Type:</b> Théatre</li>
-				<li class="info"><b>Organisateur:</b> Antony Ro</li>
-				<li class="info"><b>Public:</b> oui</li>
-				<li class="info"><b>Lieu:</b> 2 Montée Auguste Kerl 06300 Nice</li>
-				<li class="info"><b>Date:</b> 20/10/2017</li>
-				<li class="info"><b>Horaires:</b> à 20h</li>
-				<li class="info"><b>Nombre de places:</b> 100</li>
-				<li class="info"><b>Tags:</b> #Théâtre #Alfonso</li>
-			</ul>	
+			<ul class="infos"></ul>
+
+			<div class="localize">Localize Event</div>
+
+			<div class="leave">Leave Event</div>
 
     	</div>
 

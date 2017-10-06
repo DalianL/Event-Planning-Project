@@ -25,7 +25,31 @@ var app = {
     },
 
     bindEvents: function() {
+        var backbutton = document.querySelector("#back");
+        var event3trigger = document.querySelector("#Alfonso");
 
+        backbutton.addEventListener('touchstart', this.onTouch, false);
+
+        event3trigger.addEventListener('touchstart', this.onTouch, false);
+
+        // For debugging purposes
+
+        backbutton.addEventListener('click', this.onTouch, false);
+
+        event3trigger.addEventListener('click', this.onTouch, false);
+
+    },
+
+    onTouch: function() {
+        if (document.querySelector("#event3").style.display == "none") {
+            document.querySelector("#calendar").setAttribute('style', 'display:none;');
+            document.querySelector("#event3").setAttribute('style', 'display:block;');
+            event3.displayEvent();
+        } else {
+            document.querySelector("#event3").setAttribute('style', 'display:none;');
+            document.querySelector("#calendar").setAttribute('style', 'display:block;');
+            document.querySelector(".infos").innerHTML = "";
+        }
     }
 
 };

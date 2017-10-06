@@ -26,20 +26,29 @@ var app = {
 
     bindEvents: function() {
         var backbutton = document.querySelector("#back");
-        var event1 = document.querySelector("#MrsC");
+        var event3trigger = document.querySelector("#Alfonso");
 
         backbutton.addEventListener('touchstart', this.onTouch, false);
 
-        event1.addEventListener('touchstart', this.onTouch, false);
+        event3trigger.addEventListener('touchstart', this.onTouch, false);
+
+        // For debugging purposes
+
+        backbutton.addEventListener('click', this.onTouch, false);
+
+        event3trigger.addEventListener('click', this.onTouch, false);
+
     },
 
     onTouch: function() {
-        if (document.querySelector("#event1").style.display == "none") {
+        if (document.querySelector("#event3").style.display == "none") {
             document.querySelector("#events").setAttribute('style', 'display:none;');
-            document.querySelector("#event1").setAttribute('style', 'display:block;');
+            document.querySelector("#event3").setAttribute('style', 'display:block;');
+            event3.displayEvent();
         } else {
-            document.querySelector("#event1").setAttribute('style', 'display:none;');
+            document.querySelector("#event3").setAttribute('style', 'display:none;');
             document.querySelector("#events").setAttribute('style', 'display:block;');
+            document.querySelector(".infos").innerHTML = "";
         }
     }
 

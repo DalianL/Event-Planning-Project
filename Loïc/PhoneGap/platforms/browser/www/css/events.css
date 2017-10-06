@@ -81,7 +81,7 @@ ul {list-style-type: none;}
 }
 
 /* header header */
-.top {
+.eventtitle {
     padding: 20px 0px;
     width: 100%;
     background: #00BFFF;
@@ -90,28 +90,50 @@ ul {list-style-type: none;}
 }
 
 /* header list */
-.top ul {
+.eventtitle ul {
     margin: 0;
     padding: 0;
 }
 
-.top ul li {
+.eventtitle ul li {
     color: white;
     font-size: 20px;
     text-transform: uppercase;
 }
 
 /* Previous button inside header header */
-.top .prev {
+.eventtitle .prev {
     float: left;
     padding-top: 0px;
     padding-left: 10px;
 }
 
 .infos {
-    padding: 15px 20px;
+    padding: 5px 20px;
 }
 
 .info {
     margin: 10px 0;
+}
+
+.localize {
+    position: absolute;
+    bottom: 140px;
+    left: 110px;
+    color: white;
+    padding: 10px 10px;
+    background: #00BFFF;
+    border: 1px solid;
+    border-color: #00BFFF;
+}
+
+.leave {
+    position: absolute;
+    bottom: 70px;
+    left: 115px;
+    color: white;
+    padding: 10px 10px;
+    background: #00BFFF;
+    border: 1px solid;
+    border-color: #00BFFF;
 }
