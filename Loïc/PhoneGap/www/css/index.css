@@ -130,14 +130,14 @@ ul {list-style-type: none;}
 .days li .organisedevent {
     padding: 5px;
     border: 2px solid;
-    border-color: #00DED1;
+    border-color: #52A9E1;
     border-radius: 30px;
 }
 
 .days li .myevent {
     padding: 5px;
     border: 2px solid;
-    border-color: #52A9E1;
+    border-color: #00DED1;
     border-radius: 30px;
 }
 
