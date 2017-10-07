@@ -21,7 +21,7 @@
         <title>Event Schedule App</title>
     </head>
 
-    <body>
+    <body>		
 		<div style="height:20px;"></div>
 
     	<div id="events" style="display:block">	
@@ -36,7 +36,23 @@
 
 	    	<div class="joinedevt">Participing in :</div>
 
-	    	<ul style="padding:0px 30px;">
+	    	<ul id="listev" style="padding:0px 30px;">
+	    		<script>
+		    		var url_string = document.URL;
+					var url = new URL(url_string);
+					var ev = url.searchParams.get("ev");
+					if (ev == "footnc") {
+						ul = document.querySelector("#listev");
+						var li = document.createElement("li");
+						li.innerHTML = "Sport - Foot Nice Cannes";
+						li.setAttribute("class", "event");
+						li.setAttribute("id", "FootNC");
+						ul.appendChild(li);
+						var text = document.createTextNode(" (today)");
+						ul.appendChild(text);
+						ul.appendChild(document.createElement("br"));
+					}
+		    	</script>
 	    		<li class="event" id="Alfonso">Théatre - Alfonso</li> (in 2 days)<br>
 	    		<li class="event">Salon - L'Etudiant</li> (in 19 days)<br>
 	    		<li class="event">Sport - OGC Nice vs Lyon</li> (in 30 days)<br>
@@ -55,12 +71,12 @@
 
     	<script type="text/javascript" src="js/event.js"></script>
 
-    	<div id="event3" style="display:none;">
+    	<div id="eventdetails" style="display:none;">
 
 			<div class="eventtitle">
 			  	<ul>
 				    <li class="prev" id="back">&#10094;</li>
-				    <li style="padding-top:1px; padding-right: 15px;">Alfonso</li>
+				    <li class="etitle" style="padding-top:1px; padding-right: 15px;"></li>
 			  	</ul>
 			</div>
 
@@ -68,7 +84,7 @@
 
 			<div class="localize">Localize Event</div>
 
-			<div class="leave">Leave Event</div>
+			<div class="leave"><a href="events.html">Leave Event</a></div>
 
     	</div>
 

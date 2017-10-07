@@ -25,28 +25,37 @@ var app = {
     },
 
     bindEvents: function() {
-        var backbutton = document.querySelector("#back");
-        var event3trigger = document.querySelector("#Alfonso");
+        // var event1Trigger = document.querySelector("#Alfonso");
+        // event1Trigger.addEventListener('touchstart', this.onTouch, false);
+        // event1Trigger.addEventListener('click', this.onTouch, false);
 
-        backbutton.addEventListener('touchstart', this.onTouch, false);
+        var backButton = document.querySelector("#back");
+        var eventWTrigger = document.querySelector("#FootNC");
 
-        event3trigger.addEventListener('touchstart', this.onTouch, false);
+        backButton.addEventListener('touchstart', this.onTouch, false);
+
+        eventWTrigger.addEventListener('touchstart', this.onTouch, false);
 
         // For debugging purposes
 
-        backbutton.addEventListener('click', this.onTouch, false);
+        backButton.addEventListener('click', this.onTouch, false);
 
-        event3trigger.addEventListener('click', this.onTouch, false);
+        eventWTrigger.addEventListener('click', this.onTouch, false);
 
     },
 
-    onTouch: function() {
-        if (document.querySelector("#event3").style.display == "none") {
+    onTouch: function(e) {
+        if (document.querySelector("#eventdetails").style.display == "none") {
             document.querySelector("#calendar").setAttribute('style', 'display:none;');
-            document.querySelector("#event3").setAttribute('style', 'display:block;');
-            event3.displayEvent();
+            document.querySelector("#eventdetails").setAttribute('style', 'display:block;');
+            if (e.target.id == "Alfonso") {
+                event1.displayEvent();
+            } else if (e.target.id == "FootNC") {
+                eventwanted.displayEvent();
+            }
+            
         } else {
-            document.querySelector("#event3").setAttribute('style', 'display:none;');
+            document.querySelector("#eventdetails").setAttribute('style', 'display:none;');
             document.querySelector("#calendar").setAttribute('style', 'display:block;');
             document.querySelector(".infos").innerHTML = "";
         }

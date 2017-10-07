@@ -12,6 +12,9 @@ class Event {
 	}
 
 	displayEvent() {
+		var titlezone = document.querySelector(".etitle");
+		titlezone.innerHTML = this.title;
+
 		var ul = document.querySelector(".infos");
 
 		var li = document.createElement("li");
@@ -62,14 +65,26 @@ class Event {
 
 }
 
-var event3 = new Event (
+var event1 = new Event (
 	"Alfonso",
 	"Théatre", 
 	"Antony Ro", 
 	"oui", 
 	"2 Montée Auguste Kernel 06300 Nice", 
-	"29/10/2017", 
+	"12/10/2017", 
 	"à 20h", 
 	"100", 
 	["#Théatre", "#Alfonso"]
+);
+
+var eventwanted = new Event (
+	"Foot Nice Cannes",
+	"Sport", 
+	"Louis Vi", 
+	"oui", 
+	"10 Boulevard Comte de Falicon 06100 Nice", 
+	"10/10/2017", 
+	"à 16h", 
+	"200", 
+	["#Sport", "#Foot", "#Nice", "#Cannes"]
 );
