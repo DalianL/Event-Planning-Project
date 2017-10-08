@@ -9,4 +9,8 @@
     </author>
     <content src="index.html" />
     <access origin="*" />
+    <plugin name="cordova-plugin-geolocation" spec="~2.4.3" />
+	<feature name="Geolocation">
+		<param name="ios-package" value="CDVLocation" />
+	</feature>
 </widget>

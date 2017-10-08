@@ -82,7 +82,7 @@ var eventwanted = new Event (
 	"Sport", 
 	"Louis Vi", 
 	"oui", 
-	"10 Boulevard Comte de Falicon 06100 Nice", 
+	"10 Bd Comte de Falicon 06100 Nice", 
 	"10/10/2017", 
 	"à 16h", 
 	"200", 
