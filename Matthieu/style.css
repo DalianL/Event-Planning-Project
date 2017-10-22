@@ -1,0 +1,57 @@
+body
+{
+	font-family: "Helvetica Neue",Helvetica;
+	
+}
+
+.jumbotron { 
+	font-family: Montserrat, sans-serif;
+    background-color: lightblue;
+    box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+}
+
+#days
+{
+	background-color:lightblue;
+}
+
+.col-md-3
+{
+	background-color:#e6ffff;
+}
+
+
+/*
+* Add shadow effects for medium and high resolutions.
+*/
+@media only screen and (min-width: 1024px) 
+{
+	.table-responsive
+	{
+		box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+	}
+}
+
+
+
+.table{
+	
+	margin-bottom:0px;
+}
+
+#printevent
+{
+	display:none;
+	box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+}
+
+td
+{
+	text-align:center;
+	height:48px;
+}
+
+.glyphicon-remove
+{
+	float:right;
+}

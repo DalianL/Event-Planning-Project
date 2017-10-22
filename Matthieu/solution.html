@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Adptation des interfaces - Bootstrap</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+		<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		
+		<!-- Add an original police -->
+		<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+		
+		<link rel="stylesheet" href="style.css" />
+		
+		<script>
+			/**
+			* @param {String} message
+			*/
+			function showEvent(evt)
+			{
+				var doc = document.getElementById("printevent");
+				var evt = document.getElementById(evt);
+				doc.style.display = "block";
+				evt.style.display = "block";
+			}
+			
+			/**
+			* @param {String} name of div to hide
+			*/
+			
+			function hideEvent(evt)
+			{
+				var evtDiv = document.getElementById(evt);
+				var doc = document.getElementById("printevent");
+				var evt = document.getElementById(evt);
+				doc.style.display = "none";
+				evt.style.display = "none";
+			}
+		</script>
+	</head>
+	<body>
+	
+	<div id="myPage" class="jumbotron text-center">
+		  	 <h1>Event Schedule</h1> 
+			 Solution - Voir <a href="index.html">problème</a>
+		</div>	
+	
+	<div id="printevent" class="col-md-3">
+		
+		<div style="display:none;" id="jour3">
+			<a href="#" onclick="hideEvent('jour3');">
+				<span alt="Close these event" title="Close these event" class="glyphicon glyphicon-remove"></span>
+			</a>
+			<h3><span class="label label-default">Affichage d'un événement</span></h3>
+			<br />
+			<br />
+			<span class="label label-info">Match de rugby Nice Lens</span><br />
+			Sport - 10 BD Comte de Falicon 06100 Nice<br />
+			<mark>20h</mark> - Match amical opposant<br />
+			les clubs locaux de Nice à Lens.<br />
+			<img src="rugby.jpg" alt="Match rugby" style="max-width:90%"/><br />
+
+			<span class="label label-info">Forum étudiant</span><br />
+			Etudes - Sophia Antipolis<br />
+			<mark>9h</mark> - Forum etudiant sophia antipolis<br />
+			pour trouver un stage/emploi.<br />
+					
+			<span class="label label-info">Soirée d’intégration</span><br />
+			Activités - High-club Nice<br />
+			<mark>23h</mark> - 10 euros avec prévente, 15 euros sinon..<br />
+					<img src="soireedinte.jpg" alt="Soiree d'intégration" style="max-width:90%" />
+			<br />
+			<br />
+		</div>
+		
+		
+		<div style="display:none" id="jour22">
+			<a href="#" onclick="hideEvent('jour22');">
+				<span alt="Close these event" title="Close these event" class="glyphicon glyphicon-remove"></span>
+			</a>
+			<h3><span class="label label-default">Affichage d'un événement</span></h3>
+			<br />
+			<br />
+			<span class="label label-info">Manifestation contre la loi du travail</span><br />
+			Politique sophia antipolis<br />
+			<mark>12h</mark> - On partira de la rue 123, puis on prendra <br />
+			le chemin des Patous pour aller vers la cathédrale St Machine.<br />
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/ENmlB6QfykA?showinfo=0"  style="max-width:90%" frameborder="0" allowfullscreen></iframe><br />
+					
+			<span class="label label-info">Soirée d’intégration</span><br />
+			Activités - High-club Nice<br />
+			<mark>23h</mark> - 10 euros avec prévente, 15 euros sinon..<br />
+					<img src="soireedinte.jpg" alt="Soiree d'intégration" style="max-width:90%" />
+			<br />
+			<br />
+		</div>
+		
+		<div style="display:none" id="jour16">
+			<a href="#" onclick="hideEvent('jour16');">
+				<span alt="Close these event" title="Close these event" class="glyphicon glyphicon-remove"></span></a>
+				<h3><span class="label label-default">Affichage d'un événement</span></h3>
+				<br /><br />
+				<span class="label label-info">Rassemblement parkour</span><br />
+					Sport sophia antipolis<br />
+					<mark>12h</mark> - On se rejoindra à midi aux templiers<br />
+					pour une séance de parkour d'une heure<br />
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/9Vc8J339BkE" style="max-width:90%" frameborder="0" allowfullscreen></iframe>
+					
+					<span class="label label-info">Forum étudiant</span><br />
+					Etudes - Sophia Antipolis<br />
+					<mark>9h</mark> - Forum etudiant sophia antipolis<br />
+					pour trouver un stage/emploi.<br />
+		</div>
+		
+	</div>
+	
+	<div id='wrap' class="col-md-9">
+		<div class="table-responsive">
+		<table class="table">
+			<thead>
+				<tr class="info">
+					<td>
+						LU
+					</td>
+					<td>
+						MA
+					</td>
+					<td>
+						ME
+					</td>
+					<td>
+						JE
+					</td>
+					<td>
+						VE
+					</td>
+					<td>
+						SA
+					</td>
+					<td>
+						DI
+					</td>
+				</tr>
+			</thead>
+			
+			<tbody>
+				<tr>
+					<td class="active">
+						25
+					</td>
+					<td class="active">
+						26
+					</td>
+					<td class="active">
+						27
+					</td>
+					<td class="active">
+						28
+					</td>
+					<td class="active">
+						29
+					</td>
+					<td class="active">
+						30
+					</td>
+					<td >
+						1
+					</td>
+			  </tr>
+			  
+			  <tr >
+				<td>
+					2
+				</td>
+				<td>
+					3<br />
+					<a href="#" onclick="showEvent('jour3');"><span title="Show more" title="Show more" class="badge">3</span></a>
+				</td>
+				<td>
+					4
+				</td>
+				<td>
+					5
+				</td>
+				<td>
+					6
+				</td>
+				<td>
+					7
+				</td>
+				<td>
+					8
+				</td>
+			  </tr>
+			  
+			  <tr >
+				<td>
+					9
+				</td>
+				<td>
+					10
+				</td>
+				<td>
+					11
+				</td>
+				<td>
+					12
+				</td>
+				<td>
+					13
+				</td>
+				<td>
+					14
+				</td>
+				<td>
+					15
+				</td>
+			  </tr>
+			  
+			  <tr >
+				<td>
+					16<br />
+					<a href="#" onclick="showEvent('jour16');"><span title="Show more" title="Show more" class="badge">2</span></a>
+				</td>
+				<td>
+					17
+				</td>
+				<td>
+					18
+				</td>
+				<td>
+					19
+				</td>
+				<td>
+					20
+				</td>
+				<td>
+					21
+				</td>
+				<td>
+					22<br />
+					<a href="#" onclick="showEvent('jour22');"><span title="Show more" title="Show more" class="badge">2</span></a>
+				</td>
+			  </tr>
+			  
+			  <tr >
+				<td>
+					23
+				</td>
+				<td>
+					24
+				</td>
+				<td>
+					25
+				</td>
+				<td>
+					26
+				</td>
+				<td>
+					27
+				</td>
+				<td>
+					28
+				</td>
+				<td>
+					29
+				</td>
+			  </tr>
+			  
+			  <tr>
+				<td>
+					30
+				</td>
+				<td >
+					31
+				</td>
+				<td class="active">
+					1
+				</td>
+				<td class="active">
+					2
+				</td>
+				<td class="active">
+					3
+				</td>
+				<td class="active">
+					4
+				</td>
+				<td class="active">
+					5
+				</td>
+			  </tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+
+
+	
+	</body>
+</html>
