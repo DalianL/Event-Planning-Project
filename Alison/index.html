@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Planning Evenement</title>
+</head>
+<body>
+<style>
+    header {
+        background: deepskyblue;
+        position: relative;
+    }
+
+    #logIns {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+    }
+
+    #div1 {
+        position: relative;
+        width: 100%;
+        left: 0;
+    }
+
+    iframe {
+        position: absolute;
+        width: 100%;
+        height: 1200%;
+    }
+</style>
+<script>
+    const mobil = ["iPhone","iPod","iPad","Android","BlackBerry","Linux armv7l"];
+    function searc(ele) {
+        return ele == navigator.platform;
+    }
+    let boolMobil = (mobil.filter(searc).length == 1)
+    document.addEventListener("DOMContentLoaded",function () {
+        if (boolMobil){
+            document.getElementById("data").style.height = "600px";
+            document.getElementById("data").setAttribute("scr","data/jourM.html");
+        }else {
+            document.getElementById("data").setAttribute("scr","data/jour.html");
+        }
+    })
+    function swis() {
+        boolMobil = !boolMobil;
+        if (boolMobil){
+            document.getElementById("data").setAttribute("src", "data/jourM.html");
+        } else {
+            document.getElementById("data").setAttribute("src", "data/jour.html");
+        }
+    }
+</script>
+<header >
+    <h1>Planning Evenement</h1>
+    <div id="logIns">
+        <button id="log">connetion</button>
+        <button id="ins">inscrition</button>
+        <button id="swis" onclick="swis()">changer de mode</button>
+    </div>
+</header>
+<div id="div1">
+    <fieldset>
+        <button id="jour">Par jour</button>
+        <button id="theme">Par thematique</button>
+        <button id="recherche">Rechercher</button>
+    </fieldset>
+    <iframe id="data" src="data/jour.html"></iframe>
+</div>
+<script>
+    if (boolMobil){
+        document.getElementById("data").style.height = "600px";
+        document.getElementById("data").setAttribute("src", "data/jourM.html");
+    } else {
+        document.getElementById("data").setAttribute("src", "data/jour.html");
+    }
+</script>
+</body>
+</html>
